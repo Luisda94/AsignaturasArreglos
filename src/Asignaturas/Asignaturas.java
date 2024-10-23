@@ -33,10 +33,11 @@ public class Asignaturas {
 	        }
 	        //Calcular el promedio final
 	        promedioFinal /= notas.length;
-	        // Mostrar todas las notas
-	        System.out.println("Las notas ingresadas son:");
-	        for (double nota : notas) {
-	            System.out.println(nota);
+	     
+	        // Mostrar todas las notas junto con el nombre de la asignatura
+	        System.out.println("Las asignaturas y sus respectivas notas son:");
+	        for (int i = 0; i < asignaturas.length; i++) {
+	            System.out.printf("Asignatura: %s, Nota: %.2f\n", asignaturas[i], notas[i]);
 	        }
 	        
 	        // Mostrar el promedio obtenido
