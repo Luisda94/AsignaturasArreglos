@@ -9,16 +9,14 @@ public class Asignaturas {
 		Scanner Mi_escaner = new Scanner(System.in); 
 		String[] asignaturas = {"Matemáticas", "Historia", "Ciencias", "Lenguaje", "Arte"};
 		 Double notas[];
-		  notas = new Double[5];
-		 notas [0] = Mi_escaner.nextDouble();
-		 notas [1] = Mi_escaner.nextDouble();
-		 notas [2] = Mi_escaner.nextDouble();
-		 notas [3] = Mi_escaner.nextDouble();
-		 notas [4] = Mi_escaner.nextDouble();
-		 
-		 System.out.println("Ingrese el nombre de la  asigntarua: ");
-		
-		String Asignatura = Mi_escaner.nextLine();
+		//agrego solo el tamaño de notas de forma vacio
+		 notas = new Double[5];
+		  
+		// Inicializar las notas en 0.0
+	        for (int i = 0; i < notas.length; i++) {
+	            notas[i] = 0.0;
+	        }
+
 
 
 Mi_escaner.close();
