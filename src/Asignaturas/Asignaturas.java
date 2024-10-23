@@ -12,11 +12,21 @@ public class Asignaturas {
 		//agrego solo el tamaño de notas de forma vacio
 		 notas = new Double[5];
 		  
-		// Inicializar las notas en 0.0
+		// Ingresar las notas para cada asignatura
 	        for (int i = 0; i < notas.length; i++) {
-	            notas[i] = 0.0;
+	            System.out.printf("Ingrese la nota para %s: ", asignaturas[i]);
+	            notas[i] = Mi_escaner.nextDouble();
 	        }
 
+	        // Calcular el promedio final
+	        double promedioFinal = 0.0;
+	        for (int i = 0; i < notas.length; i++) {
+	            promedioFinal += notas[i];
+	        }
+	        promedioFinal /= notas.length;
+	
+	        // Mostrar el promedio obtenido
+	        System.out.printf("El promedio final es: %.2f\n", promedioFinal);
 
 
 Mi_escaner.close();
