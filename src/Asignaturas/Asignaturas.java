@@ -15,12 +15,14 @@ public class Asignaturas {
 		// Ingresar las notas para cada asignatura
 	        // Ingresar los nombres de las asignaturas y sus respectivas notas
 	        for (int i = 0; i < asignaturas.length; i++) {
-	            System.out.printf("Ingrese el nombre de la materia %d: ", i + 1);
+	            System.out.printf("Ingrese el nombre de la asignatura");
+	            System.out.println();
 	            asignaturas[i] = Mi_escaner.nextLine();  // Captura el nombre de la asignatura
 	            
 	            System.out.printf("Ingrese la nota para %s: ", asignaturas[i]);
+	            System.out.println();
 	            notas[i] = Mi_escaner.nextDouble();
-	            Mi_escaner.nextLine();//esto limplia el buffer.
+	            Mi_escaner.nextLine();//esto limplia el buffer para que se pueda se puedan ingresar sin error el resto de las asi
 	        }
 
 	        // Inicializa en cero para poder sacar el promedio
@@ -31,7 +33,12 @@ public class Asignaturas {
 	        }
 	        //Calcular el promedio final
 	        promedioFinal /= notas.length;
-	
+	        // Mostrar todas las notas
+	        System.out.println("Las notas ingresadas son:");
+	        for (double nota : notas) {
+	            System.out.println(nota);
+	        }
+	        
 	        // Mostrar el promedio obtenido
 	        System.out.printf("El promedio final es: %.2f\n", promedioFinal);
 
